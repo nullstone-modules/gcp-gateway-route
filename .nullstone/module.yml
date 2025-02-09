@@ -1,0 +1,14 @@
+org_name: nullstone
+name: gcp-gateway-route
+friendly_name: Gateway Route
+description: Hostname route from Gateway to Kubernetes app
+category: capability
+subcategory: ingress
+provider_types:
+    - gcp
+platform: gateway
+subplatform: ""
+type: ""
+appCategories:
+    - container
+is_public: true
