@@ -18,17 +18,10 @@ resource "kubernetes_manifest" "route-to-service" {
         }
       ]
 
+      hostnames = [trimsuffix(local.subdomain_fqdn, ".")]
+
       rules = [
         {
-          matches = [
-            {
-              path = {
-                type  = "PathPrefix"
-                value = "/"
-              }
-            }
-          ]
-
           backendRefs = [
             {
               name = local.service_name
